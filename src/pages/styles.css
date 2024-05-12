@@ -1,0 +1,106 @@
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  /* Form styles */
+  form {
+    display: grid;
+    gap: 15px;
+    width: 80%;
+    margin: auto;
+  }
+
+  form > div{
+    width: 100%;
+  }
+  
+  /* Input styles */
+  input[type="email"],
+  input[type="text"],
+  input[type="tel"],
+  input[type="number"],
+  select {
+    box-sizing: border-box; 
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+h3{
+  text-align: center;
+}
+  
+  /* Button styles */
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Label styles */
+  label {
+    font-weight: bold;
+  }
+  
+  /* Select styles */
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='%23333' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+  }
+  
+  /* Option styles */
+  option {
+    font-size: 16px;
+  }
+  /* styles.css */
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  z-index: 999; /* Ensure the modal appears above other content */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
+}
+
+.close {
+  cursor: pointer;
+  font-weight: bold;
+  color: green;
+  text-align: right;
+}
+
+  

@@ -65,7 +65,6 @@ const CreateCustomer = () => {
     setIsLoading(true);
     try {
       const response = await axios.post("https://p-gate-2.onrender.com/dedicated-account/assign", details); 
-      console.log(response.data);
       setModalMessage(response.data.message)
       setShowSuccessModal(true);
     } catch (error) {

@@ -8,7 +8,7 @@ const CreateCustomer = () => {
     firstName: "",
     lastName: "",
     phone: "",
-    preferredBank: "" || "test-bank",
+    preferredBank: "",
     country: "NG",
     accountNumber: "",
     bvn: "",
@@ -39,7 +39,8 @@ const CreateCustomer = () => {
       const data = await response.data.data;
       setBanks(data);
     } catch (error) {
-      console.log(error);
+      showSuccessModal(true);
+      setModalMessage(error.response.data.message)
     }
   };
 
@@ -49,7 +50,8 @@ const CreateCustomer = () => {
       const data = await response.data.data;
       setProviders(data);
     } catch (error) {
-      console.log(error);
+      showSuccessModal(true);
+      setModalMessage(error.response.data.message)
     }
   };
 
@@ -68,7 +70,8 @@ const CreateCustomer = () => {
       setModalMessage(response.data.message)
       setShowSuccessModal(true);
     } catch (error) {
-      console.error("Error submitting details:", error);
+      setModalMessage(error.response.data.message)
+      setShowSuccessModal(true);
     } finally {
       setIsLoading(false);
     }
@@ -155,7 +158,6 @@ const CreateCustomer = () => {
           <label>BVN: </label>
           <input
             type="number"
-            inputmode="numeric"
             value={details.bvn}
             onChange={handleChange}
             name="bvn"
